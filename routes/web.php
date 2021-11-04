@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get("convert/{currency}", function ($currency) {
-    $converter = new Aregsar\Converter\Converter(['EUR' => 2]);
+    $converter = new Aregsar\Converter\Converter();
     $amount = $converter->convert($currency);
     return $amount ?? "Currency not supported";
 });
