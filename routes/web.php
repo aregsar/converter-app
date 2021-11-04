@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("convert/{currency}", function ($currency) {
+    $converter = new Aregsar\Converter\Converter(['EUR' => 2]);
+    $amount = $converter->convert($currency);
+    return $amount ?? "Currency not supported";
+});
