@@ -4,8 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4842c22e789d247c4b660e69490545f",
+    "content-hash": "cb990439e6ab8f27b95382b10344b5ce",
     "packages": [
+        {
+            "name": "aregsar/converter",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../converter",
+                "reference": "f4f5116eab835924c4cc786016946ad5e44ceb3f"
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aregsar\\Converter\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Aregsar\\Converter\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Areg Sarkissian",
+                    "email": "aregsar@gmail.com"
+                }
+            ],
+            "description": "currency converter",
+            "homepage": "https://github.com/aregsar/converter",
+            "transport-options": {
+                "relative": true
+            }
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.3",
@@ -7947,7 +7992,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "aregsar/converter": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
