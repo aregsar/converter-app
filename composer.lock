@@ -12,7 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "../converter",
-                "reference": "adf2f3197683dab727c2016f0c0e32128a7d6b68"
+                "reference": "3644efc6c3f8a8f05bc0b5c5f8eeb5320af47f4c"
             },
             "require": {
                 "php": "^8.0"
