@@ -19,7 +19,6 @@ Route::get('/', function () {
 
 
 Route::get("convert/{currency}", function ($currency) {
-    // $amount = \Aregsar\Converter\ConverterFacade::convert($currency);
     $amount = Converter::convert($currency);
     return $amount ?? "Currency not supported";
 })->name("convert");
