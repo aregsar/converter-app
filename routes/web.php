@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +19,6 @@ Route::get('/', function () {
 
 
 Route::get("convert/{currency}", function ($currency) {
-    $converter = App::make("converter");
-    $amount = $converter->convert($currency);
+    $amount = \Aregsar\Converter\ConverterFacade::convert($currency);
     return $amount ?? "Currency not supported";
 })->name("convert");
