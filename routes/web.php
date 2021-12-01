@@ -18,10 +18,10 @@ Route::get('/', function () {
 });
 
 
-Route::get("convert/{currency}", function ($currency) {
-    $amount = \Converter::convert($currency);
-    return $amount ?? "Currency not supported";
-})->name("convert");
+// Route::get("convert/{currency}", function ($currency) {
+//     $amount = \Converter::convert($currency);
+//     return $amount ?? "Currency not supported";
+// })->name("convert");
 
 
 Route::get("test", function () {
