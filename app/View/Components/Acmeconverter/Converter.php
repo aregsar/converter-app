@@ -16,7 +16,7 @@ class Converter extends Component
     public function render()
     {
         return view('acme-converter::components.conversion.convert', [
-            "amount" => $this->amount,
+            "amount" => $this->amount + 2,
         ]);
     }
 }
