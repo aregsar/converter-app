@@ -30,18 +30,22 @@ Route::get("test", function () {
 
 Route::get('/user', function () {
 
-    $user = new \App\Models\User(
-        [
-            "name" => "testuser",
-            "email" => "testuser@gmail.com",
-            "email_verified_at" => now(),
-            "password" => bcrypt("password"),
-            //'password' => \Illuminate\Support\Facades\Hash::make('password'),
-            "remember_token" => "abcd",
-        ]
-    );
+    $user = \App\Models\User::all()->first();
 
-    $user->save();
+    if ($user == null) {
+        $user = new \App\Models\User(
+            [
+                "name" => "testuser",
+                "email" => "testuser@gmail.com",
+                "email_verified_at" => now(),
+                "password" => bcrypt("password"),
+                //'password' => \Illuminate\Support\Facades\Hash::make('password'),
+                "remember_token" => "abcd",
+            ]
+        );
+
+        $user->save();
+    }
 
     return $user;
 });
@@ -51,6 +55,13 @@ Route::get('/users', function () {
 
     return \App\Models\User::all();
 });
+
+
+Route::get('/notes', function () {
+
+    return \Aregsar\Converter\Models\Note::all();
+});
+
 
 
 Route::get('/note', function () {
