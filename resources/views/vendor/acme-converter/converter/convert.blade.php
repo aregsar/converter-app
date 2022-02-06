@@ -1,5 +1,5 @@
 <x-acme-converter::layouts.converter>
-    <h1>Converter View Result {{ $amount }}</h1>
+    <h1>Published Converter View Result {{ $amount }}</h1>
     <x-acme-converter::converter.simple :amount="$amount" />
     <x-acmeconverter-converter :amount="$amount" />
     <livewire:show-amount :amount="$amount" />

@@ -11,7 +11,7 @@
 
 <body>
     <div id="app">
-        <h2>This is from the Component Layout</h2>
+        <h2>Published This is from the Component Layout</h2>
         {{ $slot }}
         <h2>This is from the Component Layout</h2>
     </div>
