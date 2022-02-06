@@ -1,0 +1,17 @@
+version: "3.1"
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: converter-mysql
+    volumes:
+      - convertmysql:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=converter
+      - MYSQL_USER=converter
+      - MYSQL_PASSWORD=converter
+      - MYSQL_ROOT_PASSWORD=converter
+    ports:
+      - "8001:3306"
+volumes:
+  convertermysql:
+    driver: local
