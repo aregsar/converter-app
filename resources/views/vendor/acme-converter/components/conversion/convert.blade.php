@@ -1,3 +1,3 @@
 <div>
-    <h3>Conversion Component Result {{ $amount }}</h3>
+    <h3>Published Conversion Component Result {{ $amount }}</h3>
 </div>

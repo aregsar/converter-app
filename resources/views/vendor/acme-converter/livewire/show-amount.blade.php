@@ -1,3 +1,3 @@
 <div>
-    <h3>Livewire Component Result {{ $amount }}</h3>
+    <h3>Published Livewire Component Result {{ $amount }}</h3>
 </div>

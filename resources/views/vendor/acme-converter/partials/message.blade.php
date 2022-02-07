@@ -1,3 +1,3 @@
 <div>
-    <h3>Partial View Result {{ $amount }} - {{ $message }}</h3>
+    <h3>Published Partial View Result {{ $amount }} - {{ $message }}</h3>
 </div>
